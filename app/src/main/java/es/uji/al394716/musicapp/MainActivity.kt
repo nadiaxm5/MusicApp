@@ -33,6 +33,6 @@ class MainActivity : AppCompatActivity(), Interface1 {
         songTextView = findViewById(R.id.songTextView)
 
         val model = Model(applicationContext)
-        presenter = Presenter1()
+        presenter = Presenter1(this, model)
     }
 }
