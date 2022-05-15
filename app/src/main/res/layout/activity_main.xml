@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/artistSpinner"
         android:layout_width="236dp"
         android:layout_height="45dp"
         android:layout_marginTop="16dp"
@@ -17,17 +17,17 @@
         app:layout_constraintTop_toBottomOf="@+id/artistTextView" />
 
     <AutoCompleteTextView
-        android:id="@+id/autoCompleteTextView"
+        android:id="@+id/songAutoComplete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="AutoCompleteTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/songTextView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/artistButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -38,10 +38,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/artistSpinner" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/songButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -51,7 +51,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/songAutoComplete" />
 
     <TextView
         android:id="@+id/artistTextView"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/songTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -77,11 +77,11 @@
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/artistButton" />
 
     <RadioGroup
-        android:layout_width="225dp"
-        android:layout_height="66dp"
+        android:layout_width="141dp"
+        android:layout_height="63dp"
         android:layout_marginBottom="8dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -89,16 +89,16 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/onlineRadioB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="Online" />
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/localRadioB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="Local" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
