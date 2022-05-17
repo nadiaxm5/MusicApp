@@ -11,7 +11,7 @@
         android:id="@+id/searchSpinner"
         android:layout_width="236dp"
         android:layout_height="45dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchTextView"
@@ -19,10 +19,10 @@
 
     <Button
         android:id="@+id/artistButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="166dp"
+        android:layout_height="52dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#FFFFFF"
         android:text="SEARCH ARTIST"
         android:textAllCaps="false"
@@ -34,9 +34,9 @@
 
     <Button
         android:id="@+id/songButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="166dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="#FFFFFF"
         android:text="SEARCH SONG"
@@ -50,7 +50,7 @@
         android:id="@+id/searchTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-black"
         android:text="SEARCH..."
         android:textColor="#000000"
@@ -61,8 +61,8 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="141dp"
-        android:layout_height="63dp"
+        android:layout_width="148dp"
+        android:layout_height="51dp"
         android:layout_marginBottom="8dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -77,8 +77,8 @@
 
         <RadioButton
             android:id="@+id/localRadioB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
             android:text="Local" />
     </RadioGroup>
 
