@@ -32,12 +32,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/url"
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:text="Song" />
-
-                <TextView
                     android:id="@+id/artistName"
                     android:layout_width="match_parent"
                     android:layout_height="34dp"
@@ -47,9 +41,17 @@
                     android:id="@+id/followers"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:text="Date: " />
+                    android:text="Followers:" />
+
+                <TextView
+                    android:id="@+id/url"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="URL: " />
 
             </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

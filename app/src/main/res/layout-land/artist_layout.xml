@@ -7,8 +7,8 @@
     android:background="#FFEB3B">
 
     <LinearLayout
-        android:layout_width="388dp"
-        android:layout_height="103dp"
+        android:layout_width="574dp"
+        android:layout_height="105dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +22,7 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="81dp"
+                android:layout_width="129dp"
                 android:layout_height="match_parent"
                 app:srcCompat="@android:drawable/star_big_off" />
 
@@ -30,12 +30,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/url"
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:text="Song" />
 
                 <TextView
                     android:id="@+id/artistName"
@@ -47,9 +41,17 @@
                     android:id="@+id/followers"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:text="Date: " />
+                    android:text="Followers:" />
+
+                <TextView
+                    android:id="@+id/url"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="URL: " />
 
             </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

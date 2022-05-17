@@ -11,75 +11,51 @@
         android:id="@+id/artistSpinner"
         android:layout_width="236dp"
         android:layout_height="45dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/artistTextView"
+        app:layout_constraintTop_toBottomOf="@+id/searchTextView"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    <AutoCompleteTextView
-        android:id="@+id/songAutoComplete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="AutoCompleteTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/songTextView"
-        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/artistButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="166dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="#FFFFFF"
-        android:text="SEARCH"
+        android:text="SEARCH ARTIST"
         android:textAllCaps="false"
         android:textColor="#000000"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/artistSpinner" />
 
     <Button
         android:id="@+id/songButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="166dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="10dp"
         android:backgroundTint="#FFFFFF"
-        android:text="SEARCH"
+        android:text="SEARCH SONG"
         android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/songAutoComplete" />
+        app:layout_constraintTop_toBottomOf="@+id/artistSpinner" />
 
     <TextView
-        android:id="@+id/artistTextView"
+        android:id="@+id/searchTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-black"
-        android:text="Artist"
+        android:text="Search..."
         android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/songTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Song"
-        android:textColor="#000000"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/artistButton" />
 
     <RadioGroup
         android:layout_width="141dp"
@@ -98,7 +74,7 @@
 
         <RadioButton
             android:id="@+id/localRadioB"
-            android:layout_width="wrap_content"
+            android:layout_width="76dp"
             android:layout_height="wrap_content"
             android:text="Local" />
     </RadioGroup>

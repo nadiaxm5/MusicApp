@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(), Interface1 {
         songButton = findViewById(R.id.songButton)
         radioLocal = findViewById(R.id.localRadioB)
         radioOnline = findViewById(R.id.onlineRadioB)
-        artistTextView = findViewById(R.id.artistTextView)
+        artistTextView = findViewById(R.id.searchTextView)
         songTextView = findViewById(R.id.songTextView)
 
         val model = Model(applicationContext)
