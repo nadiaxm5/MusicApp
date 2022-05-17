@@ -40,14 +40,14 @@
                 <TextView
                     android:id="@+id/followers"
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
+                    android:layout_height="32dp"
                     android:text="Followers:" />
 
                 <TextView
                     android:id="@+id/url"
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:text="URL: " />
+                    android:layout_height="32dp"
+                    android:text="URL:" />
 
             </LinearLayout>
 

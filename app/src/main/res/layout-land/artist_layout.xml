@@ -38,13 +38,13 @@
                     android:text="Artist" />
 
                 <TextView
-                    android:id="@+id/followers"
+                    android:id="@+id/date"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:text="Followers:" />
 
                 <TextView
-                    android:id="@+id/url"
+                    android:id="@+id/songName"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:text="URL: " />

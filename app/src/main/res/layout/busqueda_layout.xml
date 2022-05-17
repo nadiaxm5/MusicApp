@@ -7,7 +7,7 @@
     android:background="#FFEB3B">
 
     <TextView
-        android:id="@+id/Busqueda"
+        android:id="@+id/search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -23,5 +23,5 @@
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Busqueda" />
+        app:layout_constraintTop_toBottomOf="@+id/search" />
 </androidx.constraintlayout.widget.ConstraintLayout>

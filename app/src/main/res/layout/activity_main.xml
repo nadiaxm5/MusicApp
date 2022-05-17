@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Spinner
-        android:id="@+id/artistSpinner"
+        android:id="@+id/searchSpinner"
         android:layout_width="236dp"
         android:layout_height="45dp"
         android:layout_marginTop="32dp"
@@ -29,7 +29,7 @@
         android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/artistSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/searchSpinner" />
 
     <Button
         android:id="@+id/songButton"
@@ -42,7 +42,7 @@
         android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/artistSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/searchSpinner" />
 
     <TextView
         android:id="@+id/searchTextView"
