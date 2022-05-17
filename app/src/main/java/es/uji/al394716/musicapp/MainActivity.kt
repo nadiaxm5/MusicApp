@@ -2,6 +2,7 @@ package es.uji.al394716.musicapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import es.uji.al394716.musicapp.Activity1.Interface1
 import es.uji.al394716.musicapp.Activity1.Presenter1
@@ -34,5 +35,19 @@ class MainActivity : AppCompatActivity(), Interface1 {
 
         val model = Model(applicationContext)
         presenter = Presenter1(this, model)
+    }
+
+    override fun showWords(words: Array<String>) {
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, words)
+        artistSpinner.adapter = adapter
+        object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                val word : String = artistSpinner.getItemAtPosition(p2) as String
+                presenter.setChosenWord(word)
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+            }
+        }.also {artistSpinner.onItemSelectedListener = it}
     }
 }
