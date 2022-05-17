@@ -10,26 +10,16 @@
         android:id="@+id/search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="NOMBRE"
+        android:layout_marginTop="16dp"
+        android:text="SEARCH"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/descripcionArtista"
-        app:layout_constraintStart_toStartOf="@+id/descripcionArtista"
+        app:layout_constraintEnd_toStartOf="@+id/recyclerView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/descripcionArtista"
-        android:layout_width="220dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:text="Descripcion..."
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search" />
-
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="376dp"
+        android:id="@+id/recyclerView"
+        android:layout_width="388dp"
         android:layout_height="360dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
