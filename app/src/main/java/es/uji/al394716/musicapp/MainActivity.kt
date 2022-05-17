@@ -25,12 +25,12 @@ class MainActivity : AppCompatActivity(), Interface1 {
         setContentView(R.layout.activity_main)
 
         songAutoComplete = findViewById(R.id.autoComplete)
-        artistSpinner = findViewById(R.id.artistSpinner)
+        artistSpinner = findViewById(R.id.searchSpinner)
         artistButton = findViewById(R.id.artistButton)
         songButton = findViewById(R.id.songButton)
         radioLocal = findViewById(R.id.localRadioB)
         radioOnline = findViewById(R.id.onlineRadioB)
-        artistTextView = findViewById(R.id.artistTextView)
+        artistTextView = findViewById(R.id.searchTextView)
         songTextView = findViewById(R.id.songTextView)
 
         val model = Model(applicationContext)
