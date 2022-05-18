@@ -34,19 +34,13 @@
                 <TextView
                     android:id="@+id/artistName"
                     android:layout_width="match_parent"
-                    android:layout_height="34dp"
+                    android:layout_height="50dp"
                     android:text="Artist" />
-
-                <TextView
-                    android:id="@+id/followers"
-                    android:layout_width="match_parent"
-                    android:layout_height="32dp"
-                    android:text="Followers:" />
 
                 <TextView
                     android:id="@+id/url"
                     android:layout_width="match_parent"
-                    android:layout_height="32dp"
+                    android:layout_height="51dp"
                     android:text="URL:" />
 
             </LinearLayout>
