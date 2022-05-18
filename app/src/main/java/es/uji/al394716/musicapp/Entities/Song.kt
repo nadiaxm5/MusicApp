@@ -5,9 +5,13 @@ import android.os.Parcelable
 import androidx.room.PrimaryKey
 
 class Song(@PrimaryKey val idSong : Int,
-           val title:String?): Parcelable {
+           val title:String?,
+           val artistSongName:String?,
+           val date:String?): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
+        parcel.readString(),
+        parcel.readString(),
         parcel.readString()
     ) {
     }
@@ -19,6 +23,8 @@ class Song(@PrimaryKey val idSong : Int,
     override fun writeToParcel(p0: Parcel, p1: Int) {
         p0.writeInt(idSong)
         p0.writeString(title)
+        p0.writeString(artistSongName)
+        p0.writeString(date)
     }
 
     companion object CREATOR : Parcelable.Creator<Song> {
