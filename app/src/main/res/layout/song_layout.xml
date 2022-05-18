@@ -38,16 +38,16 @@
                     android:text="Song" />
 
                 <TextView
-                    android:id="@+id/artistName"
-                    android:layout_width="match_parent"
-                    android:layout_height="34dp"
-                    android:text="Artist" />
-
-                <TextView
                     android:id="@+id/date"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:text="Date: " />
+
+                <TextView
+                    android:id="@+id/artist_song_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:text="Artist:" />
 
             </LinearLayout>
         </LinearLayout>
