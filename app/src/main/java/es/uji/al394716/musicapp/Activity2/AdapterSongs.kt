@@ -1,5 +1,6 @@
 package es.uji.al394716.musicapp.Activity2
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,7 @@ import es.uji.al394716.musicapp.R
 
 class AdapterSongs(val songsList: List<Song>): RecyclerView.Adapter<AdapterSongs.ViewHolder>() {
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
-        val songNameTV: TextView = view.findViewById(R.id.title)
+        val songNameTV: TextView = view.findViewById(R.id.songName)
         val artistTV: TextView = view.findViewById(R.id.artist_song_name)
         val dateTV: TextView = view.findViewById(R.id.date)
     }
