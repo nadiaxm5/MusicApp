@@ -32,10 +32,8 @@ class DialogArtist(val view: Interface2) : DialogFragment(){
 
         val page = Uri.parse(url)
 
-
         val intent = Intent(Intent.ACTION_VIEW, page)
         startActivity(intent)
-
 
     }
 }
