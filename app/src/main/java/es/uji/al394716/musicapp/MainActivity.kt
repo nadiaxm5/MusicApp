@@ -83,8 +83,5 @@ class MainActivity : AppCompatActivity(), Interface1 {
             putExtra(Activity2.BY_ARTIST, byArtist)
         }
         startActivity(intent)
-        if (intent.resolveActivity(packageManager)!=null){
-
-        }
     }
 }

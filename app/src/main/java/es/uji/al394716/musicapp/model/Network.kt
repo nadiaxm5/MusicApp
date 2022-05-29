@@ -22,6 +22,7 @@ private const val FIRST_URL = "https://genius.p.rapidapi.com/search?q="
 
 private const val LIST = "hits"             //And then "result"
 private const val TITLE = "title"
+private const val FULLTITLE = "full_title"
 private const val SONG_ID = "id"
 private const val DATE = "release_date_for_display"
 private const val IMG = "header_image_url"
@@ -65,8 +66,9 @@ class Network private constructor(context: Context){
                 val title = songResult.getString(TITLE)
                 val artist = songResult.getString(ARTIST)
                 val date = songResult.getString(DATE)
-                val img =songResult.getString(IMG)
-                val song = Song(id,title,artist,date,img)
+                val img = songResult.getString(IMG)
+                val fullT = songResult.getString(FULLTITLE)
+                val song = Song(id,title,artist,date,img,fullT)
                 songs.add(song)
             }
 

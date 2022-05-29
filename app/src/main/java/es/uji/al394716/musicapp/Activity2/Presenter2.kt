@@ -56,6 +56,10 @@ class Presenter2(val view: Interface2, val model: Model) {
     }
 
     fun onSongSelected(position: Int){
-        view.toSongActivity()
+        for(i in 0 until listSongs.size){
+            if(listSongs[i].idSong == listSongs[position].idSong){
+                view.toSongActivity(listSongs[i].image!!, listSongs[i].fullTitle!!)
+            }
+        }
     }
 }

@@ -10,5 +10,5 @@ interface Interface2 {
     fun showSongs(songs: List<Song>)
     fun showArtists(artists: List<Artist>)
     fun showError(message: String)
-    fun toSongActivity()
+    fun toSongActivity(image: String, fullTitle: String)
 }

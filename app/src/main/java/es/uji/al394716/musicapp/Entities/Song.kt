@@ -10,9 +10,11 @@ class Song(@PrimaryKey val idSong : Int,
            val title:String?,
            val artistSongName:String?,
            val date:String?,
-           val image:String?): Parcelable {
+           val image:String?,
+           val fullTitle:String?): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -30,6 +32,7 @@ class Song(@PrimaryKey val idSong : Int,
         p0.writeString(artistSongName)
         p0.writeString(date)
         p0.writeString(image)
+        p0.writeString(fullTitle)
     }
 
     companion object CREATOR : Parcelable.Creator<Song> {

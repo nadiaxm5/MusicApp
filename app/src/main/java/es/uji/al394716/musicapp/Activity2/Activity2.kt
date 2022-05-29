@@ -1,11 +1,13 @@
 package es.uji.al394716.musicapp.Activity2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import es.uji.al394716.musicapp.Activity3.Activity3
 import es.uji.al394716.musicapp.Entities.Artist
 import es.uji.al394716.musicapp.Entities.Song
 import es.uji.al394716.musicapp.R
@@ -26,8 +28,6 @@ class Activity2 : AppCompatActivity(), Interface2 {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.busqueda_layout)
-
-        Log.d("Update", "I'm in activity2")
 
         songPart = intent.getStringExtra(SONG_PART)
         searchedByArtist = intent.getBooleanExtra(BY_ARTIST, false)
@@ -59,7 +59,11 @@ class Activity2 : AppCompatActivity(), Interface2 {
         Toast.makeText(this, message.toString(), Toast.LENGTH_LONG).show()
     }
 
-    override fun toSongActivity() {
-        //Nada
+    override fun toSongActivity(image: String, fullTitle: String) {
+        val intent = Intent(this, Activity3::class.java).apply {
+            putExtra(Activity3.IMAGE, image)
+            putExtra(Activity3.FULLTITLE, fullTitle)
+        }
+        startActivity(intent)
     }
 }
