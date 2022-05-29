@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import es.uji.al394716.musicapp.Entities.Artist
 import es.uji.al394716.musicapp.R
 
-class AdapterArtists(val artistsList: List<Artist>): RecyclerView.Adapter<AdapterArtists.ViewHolder>() {
+class AdapterArtists(val artistsList: List<Artist>, val onClickListener: (Int) -> Unit): RecyclerView.Adapter<AdapterArtists.ViewHolder>() {
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
         val artistNameTV: TextView = view.findViewById(R.id.artistName)
@@ -26,6 +26,9 @@ class AdapterArtists(val artistsList: List<Artist>): RecyclerView.Adapter<Adapte
             holder.artistNameTV.text = artistName
             holder.urlArtistPageTV.text = urlPage
             holder.artistSongTV.text = titleArtistSong
+            holder.itemView.setOnClickListener{
+                onClickListener(position)
+            }
         }
     }
 

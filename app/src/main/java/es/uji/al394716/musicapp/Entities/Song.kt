@@ -1,5 +1,7 @@
 package es.uji.al394716.musicapp.Entities
 
+import android.graphics.Bitmap
+import android.media.Image
 import android.os.Parcel
 import android.os.Parcelable
 import androidx.room.PrimaryKey
@@ -7,9 +9,11 @@ import androidx.room.PrimaryKey
 class Song(@PrimaryKey val idSong : Int,
            val title:String?,
            val artistSongName:String?,
-           val date:String?): Parcelable {
+           val date:String?,
+           val image:String?): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString()
@@ -25,6 +29,7 @@ class Song(@PrimaryKey val idSong : Int,
         p0.writeString(title)
         p0.writeString(artistSongName)
         p0.writeString(date)
+        p0.writeString(image)
     }
 
     companion object CREATOR : Parcelable.Creator<Song> {

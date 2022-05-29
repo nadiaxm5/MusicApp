@@ -49,4 +49,13 @@ class Presenter2(val view: Interface2, val model: Model) {
                 }){ error -> view.showError(error.toString())}
         }
     }
+
+
+    fun onArtistSelected(position: Int){
+        //Nada aún, ir a pag internet
+    }
+
+    fun onSongSelected(position: Int){
+        view.toSongActivity()
+    }
 }

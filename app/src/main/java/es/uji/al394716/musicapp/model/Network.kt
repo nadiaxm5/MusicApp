@@ -24,6 +24,7 @@ private const val LIST = "hits"             //And then "result"
 private const val TITLE = "title"
 private const val SONG_ID = "id"
 private const val DATE = "release_date_for_display"
+private const val IMG = "header_image_url"
 private const val ARTIST = "artist_names"
 private const val PRIMARY_ARTIST = "primary_artist"
 private const val ARTIST_URL = "url"        //Inside "primary artist", the one outside is for lyrics
@@ -64,7 +65,8 @@ class Network private constructor(context: Context){
                 val title = songResult.getString(TITLE)
                 val artist = songResult.getString(ARTIST)
                 val date = songResult.getString(DATE)
-                val song = Song(id,title,artist,date)
+                val img =songResult.getString(IMG)
+                val song = Song(id,title,artist,date,img)
                 songs.add(song)
             }
 
