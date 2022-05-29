@@ -23,11 +23,11 @@ class Presenter2(val view: Interface2, val model: Model) {
                     } else{
                         Log.d("From Presenter2 ", "I'm in the onResponse")
                         for(i in 0 until songs.size){
-                            listSongs.add(songs[i])
+                            if(!listSongs.contains(songs[i])){ //No repetitions (Same artist with same song)
+                                listSongs.add(songs[i])
+                            }
                         }
-                        if(listSongs.size == songs.size){
-                            view.showSongs(listSongs)
-                        }
+                        view.showSongs(listSongs)
                     }
                 }){ error -> view.showError(error.toString())}
         }
@@ -40,11 +40,11 @@ class Presenter2(val view: Interface2, val model: Model) {
                     } else{
                         Log.d("From Presenter2 ", "I'm in the onResponse")
                         for(i in 0 until artists.size){
-                            listArtists.add(artists[i])
+                            if(!listArtists.contains(artists[i])){ //No repetitions (Same artist with same song)
+                                listArtists.add(artists[i])
+                            }
                         }
-                        if(listArtists.size == artists.size){
-                            view.showArtists(listArtists)
-                        }
+                        view.showArtists(listArtists)
                     }
                 }){ error -> view.showError(error.toString())}
         }
