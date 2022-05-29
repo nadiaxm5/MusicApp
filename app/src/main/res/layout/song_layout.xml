@@ -36,7 +36,7 @@
                     android:id="@+id/songName"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:text="Song" />
+                    android:text="Song:" />
 
                 <TextView
                     android:id="@+id/date"
