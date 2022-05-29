@@ -6,10 +6,14 @@ import androidx.room.PrimaryKey
 
 class Artist(@PrimaryKey val idArtist : Int,
              val idArtistSong : Int,
-             val titleArtistSong:String?): Parcelable {
+             val titleArtistSong:String?,
+             val artistName:String?,
+             val urlPage : String?): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readInt(),
+        parcel.readString(),
+        parcel.readString(),
         parcel.readString()
     ) {
     }
@@ -22,6 +26,8 @@ class Artist(@PrimaryKey val idArtist : Int,
         p0.writeInt(idArtist)
         p0.writeInt(idArtistSong)
         p0.writeString(titleArtistSong)
+        p0.writeString(artistName)
+        p0.writeString(urlPage)
     }
 
     companion object CREATOR : Parcelable.Creator<Song> {

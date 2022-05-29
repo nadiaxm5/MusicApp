@@ -1,8 +1,52 @@
 package es.uji.al394716.musicapp.Activity2
 
-import es.uji.al394716.musicapp.Activity1.Interface1
+import android.util.Log
+import es.uji.al394716.musicapp.Entities.Artist
+import es.uji.al394716.musicapp.Entities.Song
 import es.uji.al394716.musicapp.model.Model
 
 class Presenter2(val view: Interface2, val model: Model) {
+    private var word: String? = null
+    private var searchedByArtist: Boolean = false
+    private var listSongs = ArrayList<Song>()
+    private var listArtists = ArrayList<Artist>()
 
+    init{
+        word = view.GetChosenWord() //Getting the chosen word from the interface
+        searchedByArtist = view.GetIfSearchedByArtist() //Knowing if it is searched by artist
+
+        if(!searchedByArtist){ //Searched by Song's button
+            model.getSongs(word!!,
+                { songs ->
+                    if(songs.isEmpty()){
+                        view.showError("Might be a bad JSON")
+                    } else{
+                        Log.d("From Presenter2 ", "I'm in the onResponse")
+                        for(i in 0 until songs.size){
+                            listSongs.add(songs[i])
+                        }
+                        if(listSongs.size == songs.size){
+                            view.showSongs(listSongs)
+                        }
+                    }
+                }){ error -> view.showError(error.toString())}
+        }
+
+        else{
+            model.getArtists(word!!,
+                {artists ->
+                    if(artists.isEmpty()){
+                        view.showError("Might be a bad JSON")
+                    } else{
+                        Log.d("From Presenter2 ", "I'm in the onResponse")
+                        for(i in 0 until artists.size){
+                            listArtists.add(artists[i])
+                        }
+                        if(listArtists.size == artists.size){
+                            view.showArtists(listArtists)
+                        }
+                    }
+                }){ error -> view.showError(error.toString())}
+        }
+    }
 }
