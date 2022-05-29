@@ -7,7 +7,7 @@ import es.uji.al394716.musicapp.Entities.Song
 
 class Model(context: Context) {
 
-    val words_array = arrayOf("Love", "Live", "Day", "Night", "World", "Time", "Star", "Death", "Moon", "Sun", "Luck")
+    val words_array = arrayOf("Love", "Live", "Feel", "Night", "Like", "Time", "Hand", "Body", "Thing", "Good")
     private val network = Network.getInstance(context)
 
     fun getSongs(nameSong: String, listener: Response.Listener<List<Song>>, errorListener: Response.ErrorListener){

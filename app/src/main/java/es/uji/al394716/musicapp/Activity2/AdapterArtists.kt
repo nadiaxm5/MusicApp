@@ -12,6 +12,7 @@ class AdapterArtists(val artistsList: List<Artist>): RecyclerView.Adapter<Adapte
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
         val artistNameTV: TextView = view.findViewById(R.id.artistName)
+        val artistSongTV: TextView = view.findViewById(R.id.artistSongTV)
         val urlArtistPageTV: TextView = view.findViewById(R.id.url)
     }
 
@@ -24,6 +25,7 @@ class AdapterArtists(val artistsList: List<Artist>): RecyclerView.Adapter<Adapte
         with(artistsList[position]) {
             holder.artistNameTV.text = artistName
             holder.urlArtistPageTV.text = urlPage
+            holder.artistSongTV.text = titleArtistSong
         }
     }
 
