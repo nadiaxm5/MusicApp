@@ -4,28 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFEB3B">
+    android:background="#FFEB3B"
+    tools:context=".Activity3.Activity3">
 
     <TextView
-        android:id="@+id/title_song"
+        android:id="@+id/fullTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Song"
+        android:layout_marginTop="10dp"
+        android:text="Titulo"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/lyrics"
-        android:layout_width="375dp"
-        android:layout_height="615dp"
-        android:layout_marginTop="16dp"
-        android:text="La letra es esta"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_song" />
 </androidx.constraintlayout.widget.ConstraintLayout>

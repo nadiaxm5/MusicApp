@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MusicApp">
         <activity
+            android:name=".Activity3.Activity3"
+            android:exported="false" />
+        <activity
             android:name=".Activity2.Activity2"
             android:exported="false" />
         <activity
