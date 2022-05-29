@@ -12,6 +12,7 @@ import es.uji.al394716.musicapp.Entities.Artist
 import es.uji.al394716.musicapp.Entities.Song
 import es.uji.al394716.musicapp.R
 import es.uji.al394716.musicapp.model.Model
+import es.uji.al394716.musicapp.Activity2.DialogArtist as DialogArtist1
 
 class Activity2 : AppCompatActivity(), Interface2 {
 
@@ -19,6 +20,7 @@ class Activity2 : AppCompatActivity(), Interface2 {
     private var searchedByArtist : Boolean = false
     lateinit var recyclerView: RecyclerView
     lateinit var presenter : Presenter2
+    private var artistPage : String? = null
 
     companion object{
         const val SONG_PART = "songPart"
@@ -39,8 +41,8 @@ class Activity2 : AppCompatActivity(), Interface2 {
         presenter = Presenter2(this, model)
     }
 
-    override fun GetChosenWord() : String? {
-        return songPart
+    override fun GetChosenWord() : String {
+        return songPart!!
     }
 
     override fun GetIfSearchedByArtist(): Boolean {
@@ -66,4 +68,14 @@ class Activity2 : AppCompatActivity(), Interface2 {
         }
         startActivity(intent)
     }
+
+    override fun setArtistPage(url: String) {
+        artistPage = url
+    }
+
+    override fun GetArtistPage(): String {
+        return artistPage!!
+    }
+
+    override fun dialogManager() = DialogArtist1(this).show(supportFragmentManager, "DialogArtist")
 }

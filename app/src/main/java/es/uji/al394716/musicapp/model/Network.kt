@@ -94,7 +94,7 @@ class Network private constructor(context: Context){
         queue.add(jsonObjectRequest)
     }
 
-    //To process the artists obtained, called by getSongs
+    //To process the artists obtained, called by getArtists
     private fun processArtist(response: JSONObject, listener: Response.Listener<List<Artist>>, errorListener: Response.ErrorListener) {
         val artists = ArrayList<Artist>()
         try{

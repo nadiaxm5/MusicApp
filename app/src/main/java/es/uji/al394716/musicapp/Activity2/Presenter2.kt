@@ -52,7 +52,12 @@ class Presenter2(val view: Interface2, val model: Model) {
 
 
     fun onArtistSelected(position: Int){
-        //Nada aún, ir a pag internet
+        for(i in 0 until listArtists.size){
+            if(listArtists[i].idArtist == listArtists[position].idArtist){
+                view.setArtistPage(listArtists[i].urlPage!!)
+                view.dialogManager()
+            }
+        }
     }
 
     fun onSongSelected(position: Int){
