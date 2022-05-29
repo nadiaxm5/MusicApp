@@ -7,8 +7,8 @@
     android:background="#FFEB3B">
 
     <LinearLayout
-        android:layout_width="342dp"
-        android:layout_height="104dp"
+        android:layout_width="344dp"
+        android:layout_height="127dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,7 +17,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <ImageView
@@ -46,7 +46,7 @@
                 <TextView
                     android:id="@+id/artist_song_name"
                     android:layout_width="match_parent"
-                    android:layout_height="34dp"
+                    android:layout_height="56dp"
                     android:text="Artist:" />
 
             </LinearLayout>
