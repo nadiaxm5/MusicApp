@@ -34,7 +34,7 @@
                 <TextView
                     android:id="@+id/artistName"
                     android:layout_width="match_parent"
-                    android:layout_height="59dp"
+                    android:layout_height="43dp"
                     android:text="Artist:" />
 
                 <TextView

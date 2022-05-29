@@ -4,8 +4,10 @@ import android.graphics.Bitmap
 import android.media.Image
 import android.os.Parcel
 import android.os.Parcelable
+import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+@Entity
 class Song(@PrimaryKey val idSong : Int,
            val title:String?,
            val artistSongName:String?,

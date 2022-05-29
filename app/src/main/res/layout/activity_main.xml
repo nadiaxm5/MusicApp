@@ -23,11 +23,11 @@
         android:layout_height="52dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="#000000"
         android:onClick="searchArtist"
         android:text="SEARCH ARTIST"
         android:textAllCaps="false"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchSpinner" />
@@ -38,10 +38,10 @@
         android:layout_height="52dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="#000000"
         android:onClick="searchSong"
         android:text="SEARCH      SONG"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchSpinner" />
@@ -72,6 +72,7 @@
             android:id="@+id/onlineRadioB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="Online" />
 
         <RadioButton

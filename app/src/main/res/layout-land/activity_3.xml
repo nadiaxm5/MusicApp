@@ -7,6 +7,19 @@
     android:background="#FFEB3B"
     tools:context=".Activity3.Activity3">
 
+    <Button
+        android:id="@+id/dataBaseButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#000000"
+        android:onClick="addToDataBase"
+        android:text="SAVE ON FAVORITES"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/fullTitle"
         android:layout_width="165dp"
@@ -14,7 +27,9 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:text="Title"
+        android:textColor="#000000"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
