@@ -1,11 +1,14 @@
 package es.uji.al394716.musicapp.Activity3
 
+import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
+import com.android.volley.toolbox.ImageRequest
 import es.uji.al394716.musicapp.R
+import es.uji.al394716.musicapp.model.VolleySingleton
 
 class Activity3 : AppCompatActivity() {
     private var image : String? = null
@@ -29,7 +32,23 @@ class Activity3 : AppCompatActivity() {
 
         fullTitleTextView.text = fullTitle
 
-        Log.d("Image", image.toString())
-        Log.d("Title", fullTitle.toString())
+        // request a image response from the provided url
+        val imageRequest = ImageRequest(
+            image,
+            {bitmap -> // response listener
+                imageView.setImageBitmap(bitmap)
+            },
+            0, // max width
+            0, // max height
+            ImageView.ScaleType.CENTER_CROP, // image scale type
+            Bitmap.Config.ARGB_8888, // decode config
+            {error-> // error listener
+                Log.d("Error", "En imagen")
+            }
+        )
+
+        VolleySingleton.getInstance(applicationContext)
+            .addToRequestQueue(imageRequest)
+
     }
 }
