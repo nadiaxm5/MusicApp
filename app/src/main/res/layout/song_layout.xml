@@ -7,8 +7,8 @@
     android:background="#FFEB3B">
 
     <LinearLayout
-        android:layout_width="384dp"
-        android:layout_height="103dp"
+        android:layout_width="342dp"
+        android:layout_height="104dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
