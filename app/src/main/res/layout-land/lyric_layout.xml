@@ -19,13 +19,13 @@
 
     <TextView
         android:id="@+id/lyrics"
-        android:layout_width="375dp"
-        android:layout_height="615dp"
+        android:layout_width="646dp"
+        android:layout_height="333dp"
         android:layout_marginTop="16dp"
         android:text="La letra es esta"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.412"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_song" />
 </androidx.constraintlayout.widget.ConstraintLayout>
