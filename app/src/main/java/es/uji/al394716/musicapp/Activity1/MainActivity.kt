@@ -1,22 +1,12 @@
-package es.uji.al394716.musicapp
+package es.uji.al394716.musicapp.Activity1
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.*
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.android.volley.VolleyError
-import es.uji.al394716.musicapp.Activity1.Interface1
-import es.uji.al394716.musicapp.Activity1.Presenter1
 import es.uji.al394716.musicapp.Activity2.Activity2
-import es.uji.al394716.musicapp.Activity2.AdapterArtists
-import es.uji.al394716.musicapp.Activity2.AdapterSongs
-import es.uji.al394716.musicapp.Activity2.Presenter2
-import es.uji.al394716.musicapp.Entities.Artist
-import es.uji.al394716.musicapp.Entities.Song
+import es.uji.al394716.musicapp.R
 import es.uji.al394716.musicapp.model.Model
 
 class MainActivity : AppCompatActivity(), Interface1 {

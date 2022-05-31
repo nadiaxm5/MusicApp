@@ -8,7 +8,7 @@ class Presenter1(val view: Interface1, val model: Model) {
     private var wordSelected : String? = null
 
     init{
-        val spinnerWords = model.words_array    //Getting the words array from the model
+        val spinnerWords = model.getWordsArray()    //Getting the words array from the model
         view.showWords(spinnerWords)            //Call to show the words in the spinner, passing the words array
     }
 

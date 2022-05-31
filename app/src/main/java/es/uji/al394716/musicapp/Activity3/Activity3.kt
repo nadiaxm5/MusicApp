@@ -60,7 +60,7 @@ class Activity3 : AppCompatActivity(), Interface3 {
     }
 
     override fun addToDataBase(view: View) {
-        fullTitle?.let { presenter.doAdditionToDataBase(it) }
+        fullTitle?.let { presenter.doAdditionToDataBase(it) } //The addition to data base is not implemented
     }
 
 }

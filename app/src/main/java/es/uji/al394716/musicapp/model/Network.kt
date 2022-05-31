@@ -31,6 +31,7 @@ private const val PRIMARY_ARTIST = "primary_artist"
 private const val ARTIST_URL = "url"        //Inside "primary artist", the one outside is for lyrics
 private const val ARTIST_ID = "id"          //Inside "primary artist", the one outside is for the song
 private const val RESULT = "result"
+private const val RESPONSE = "response"
 
 class Network private constructor(context: Context){
 
@@ -40,7 +41,6 @@ class Network private constructor(context: Context){
     //To get the songs from the network
     fun getSongs(nameSong: String, listener: Response.Listener<List<Song>>, errorListener: Response.ErrorListener){
         val url = "$FIRST_URL$nameSong"
-        Log.d("Genius Song", " EL URL ES $url")
         val jsonObjectRequest = object : JsonObjectRequest(Request.Method.GET, url, null,
             { response -> processSong(response, listener, errorListener)},
             { error -> errorListener.onErrorResponse(error)}) {
@@ -57,11 +57,11 @@ class Network private constructor(context: Context){
     private fun processSong(response: JSONObject, listener: Response.Listener<List<Song>>, errorListener: Response.ErrorListener) {
         val songs = ArrayList<Song>()
         try{
-            val answer = response.getJSONObject("response")
+            val answer = response.getJSONObject(RESPONSE)
             val songsArray = answer.getJSONArray(LIST)
             for (i in 0 until songsArray.length()){
                 val songObject : JSONObject = songsArray[i] as JSONObject
-                val songResult = songObject.getJSONObject("result")
+                val songResult = songObject.getJSONObject(RESULT)
                 val id = songResult.getInt(SONG_ID)
                 val title = songResult.getString(TITLE)
                 val artist = songResult.getString(ARTIST)
@@ -79,9 +79,9 @@ class Network private constructor(context: Context){
         listener.onResponse(songs)
     }
 
+    //To get the artists from the network (by a song they made that contains the word given)
     fun getArtists(nameSongFromArtist: String, listener: Response.Listener<List<Artist>>, errorListener: Response.ErrorListener) {
         val url = "$FIRST_URL$nameSongFromArtist"
-        Log.d("Genius Song", " EL URL ES $url")
         val jsonObjectRequest = object : JsonObjectRequest(Request.Method.GET, url, null,
             { response -> processArtist(response, listener, errorListener)},
             { error -> errorListener.onErrorResponse(error)}) {
@@ -98,7 +98,7 @@ class Network private constructor(context: Context){
     private fun processArtist(response: JSONObject, listener: Response.Listener<List<Artist>>, errorListener: Response.ErrorListener) {
         val artists = ArrayList<Artist>()
         try{
-            val answer = response.getJSONObject("response")
+            val answer = response.getJSONObject(RESPONSE)
             val artistsArray = answer.getJSONArray(LIST)
             for (i in 0 until artistsArray.length()){
                 val artistObject : JSONObject = artistsArray[i] as JSONObject
